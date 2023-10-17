@@ -11,11 +11,12 @@ In this exercise, we will use all what we have learned about APIs and how to con
 ## Requirements
 
 - Clone this repo
-- Install dependencies in the frontend folder and the backend folder `npm i`
-- Run `npm run dev` in the backend or `nodemon` to start the project
-  - _Note_: The `env` file is available for you in the repo.
-- Run `npm run dev` in the frontend to start the project
-  - _Note_: The `env` file is available for you in the repo.
+- `cd` into the backend folder and run `npm i` to install the dependencies.
+  - Run `npm run dev` in the backend or `nodemon` to start the project
+    - _Note_: The `env` file is available for you in the repo.
+- Open another terminal from the root of the project and `cd` into the frontend folder then run `npm i` to install the dependencies.
+  - Run `npm run dev` in the frontend to start the project
+    - _Note_: The `env` file is available for you in the repo.
 
 ## Submission
 
