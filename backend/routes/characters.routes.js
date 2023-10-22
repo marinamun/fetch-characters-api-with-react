@@ -53,6 +53,28 @@ router.post("/characters", async (req, res) => {
   }
 });
 
+//Update a character
+router.put("/characters/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const responseFromAPI = await fetch(
+      `https://ih-crud-api.herokuapp.com/characters/${id}`, {
+        method:"PUT",
+        body: JSON.stringify(req.body),
+        headers: {
+          "Content-Type":"application-json"
+        }
+      }
+    );
+    if (responseFromAPI.ok){
+      const characterFromApi = await responseFromAPI.json()
+      res.json({character: characterFromApi})
+    }
+  } catch (error) {
+    console.log(error)
+  }
+});
+
 module.exports = router;
 
 // https://ih-crud-api.herokuapp.com/characters
